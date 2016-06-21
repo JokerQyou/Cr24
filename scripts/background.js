@@ -3,8 +3,9 @@ if(chrome.tabs.onMouseScroll){
     console.info(e);
   });
 }
-chrome.tabs.onCreated.addListener(function(e){
+chrome.tabs.onCreated.addListener(function(tab){
   // Boost new tab creation (literally, but you lost top sites).
-  console.info(e);
-  chrome.tabs.update(e.id, {url: 'about:blank'});
+  if(tab.url === 'chrome://newtab/'){
+    chrome.tabs.update(tab.id, {url: 'about:blank'});
+  }
 });
