@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New tab</title>
+  </head>
+  <body id="app">
+    New tab test
+    <ol>
+      <li v-for="site in sites">
+        <a href="{{ site.url }}">{{ site.title }}</a>
+      </li>
+    </ol>
+  </body>
+  <script type="text/javascript" src="/scripts/vue.js"></script>
+  <script type="text/javascript" src="/scripts/newtab.js"></script>
+</html>

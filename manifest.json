@@ -11,6 +11,11 @@
         "default_icon": "images/icon.png"
     },
     "permissions": [
-        "tabs"
-    ]
+        "topSites",
+        "tabs",
+        "chrome://favicon/"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "pages/newtab.html"
+    }
 }
