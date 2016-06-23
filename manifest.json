@@ -3,16 +3,11 @@
     "name": "Cr24",
     "description": "A Chrome extension",
     "version": "0.0.1",
-    "background": {
-        "persistent": true,
-        "scripts": ["scripts/background.js"]
-    },
     "browser_action": {
         "default_icon": "images/icon.png"
     },
     "permissions": [
         "topSites",
-        "tabs",
         "chrome://favicon/"
     ],
     "chrome_url_overrides": {

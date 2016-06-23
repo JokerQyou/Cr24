@@ -3,14 +3,12 @@
     <meta charset="utf-8">
     <title>New tab</title>
   </head>
-  <body id="app">
-    New tab test
-    <ol>
-      <li v-for="site in sites">
-        <a href="{{ site.url }}">{{ site.title }}</a>
-      </li>
-    </ol>
+  <body>
+    Extremely fast new tab :)
+    <top-sites></top-sites>
   </body>
   <script type="text/javascript" src="/scripts/vue.js"></script>
+  <script type="text/javascript" src="/scripts/vue-async-data.js"></script>
+  <script type="text/javascript" src="/scripts/multiline.js"></script>
   <script type="text/javascript" src="/scripts/newtab.js"></script>
 </html>
