@@ -1,39 +1,78 @@
+body {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fff,
+    #fff 10px,
+    #ddd 10px,
+    #ddd 20px
+  );
+}
+
 .top-sites{
   margin: 0;
   padding:0;
   list-style: none;
   font-size: 14px;
+  display: flex;
+  flex-flow: row wrap;
+
   .favicon {
     height: 1em;
     width: 1em;
   }
 
   .expand-transition {
-    transition: all .3s ease;
-    background-color: #eee;
+    opacity: 1;
+    transform: none;
+    transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
   }
   .expand-enter, .expand-leave {
-    height: 0;
     opacity: 0;
+    transform: rotateY(-90deg);
+    transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
   }
-  a img, a span {
-    vertical-align: middle;
-  }
+
   li {
-    line-height: 1.5em;
+    perspective: 100px;
     overflow: hidden;
-    margin: 1px;
-    width: 40%;
-    float: left;
-  }
-  li a {
-    padding: 0.5em;
-    line-height: 1.5em;
-    text-decoration: none;
-    height: 1.5em;
-    display: block;
-  }
-  li a:hover {
-    box-shadow: 0 0 6px #666 inset;
+    width: 50%;
+    flex: none;
+
+    &:nth-child(odd) {
+      margin: 0 .5px 1px -.5px;
+    }
+    &:nth-child(even) {
+      margin: 0 -.5px 1px .5px;
+    }
+    a {
+      padding: 1em;
+      line-height: 2em;
+      text-decoration: none;
+      height: 2em;
+      display: block;
+      background: #fff;
+      color: #7c7c7c;
+      transition: all 0.2s linear 0s;
+
+      .favicon, span {
+        vertical-align: middle;
+      }
+
+      span {
+        display: inline-block;
+        width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &:hover {
+        background: #c29ad2;
+        color: #fff;
+
+        .favicon {
+          filter: grayscale(100%);
+        }
+      }
+    }
   }
 }

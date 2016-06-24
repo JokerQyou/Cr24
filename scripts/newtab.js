@@ -12,7 +12,7 @@ Vue.component('top-sites', {
   */}),
   data: function(){
     return {
-      sites: ['Loading...']
+      sites: []
     };
   },
   asyncData: function(resolve, reject){
