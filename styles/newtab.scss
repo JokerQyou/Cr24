@@ -1,7 +1,39 @@
 .top-sites{
+  margin: 0;
+  padding:0;
   list-style: none;
+  font-size: 14px;
   .favicon {
     height: 1em;
     width: 1em;
+  }
+
+  .expand-transition {
+    transition: all .3s ease;
+    background-color: #eee;
+  }
+  .expand-enter, .expand-leave {
+    height: 0;
+    opacity: 0;
+  }
+  a img, a span {
+    vertical-align: middle;
+  }
+  li {
+    line-height: 1.5em;
+    overflow: hidden;
+    margin: 1px;
+    width: 40%;
+    float: left;
+  }
+  li a {
+    padding: 0.5em;
+    line-height: 1.5em;
+    text-decoration: none;
+    height: 1.5em;
+    display: block;
+  }
+  li a:hover {
+    box-shadow: 0 0 6px #666 inset;
   }
 }

@@ -2,13 +2,13 @@ Vue.use(VueAsyncData);
 Vue.component('top-sites', {
   template: multiline(function(){/*@preserve
     <ol class="top-sites">
-      <li v-for="site in sites">
+      <li v-for="site in sites" transition="expand">
         <a href="{{ site.url }}">
           <img class="favicon" v-bind:src="'chrome://favicon/' + site.url">
-          {{ site.title }}
+          <span>{{ site.title }}</span>
         </a>
       </li>
-    </ol>,
+    </ol>
   */}),
   data: function(){
     return {
