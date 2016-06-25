@@ -1,0 +1,68 @@
+body {
+  background: -webkit-repeating-linear-gradient(135deg, #fff, #fff 10px, #ddd 10px, #ddd 20px);
+  background: repeating-linear-gradient(-45deg, #fff, #fff 10px, #ddd 10px, #ddd 20px); }
+
+.top-sites {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  .top-sites .favicon {
+    height: 1em;
+    width: 1em; }
+  .top-sites .expand-transition {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76);
+    transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76); }
+  .top-sites .expand-enter, .top-sites .expand-leave {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+    -webkit-transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76);
+    transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76); }
+  .top-sites li {
+    -webkit-perspective: 100px;
+            perspective: 100px;
+    overflow: hidden;
+    width: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none; }
+    .top-sites li:nth-child(odd) {
+      margin: 0 .5px 1px -.5px; }
+    .top-sites li:nth-child(even) {
+      margin: 0 -.5px 1px .5px; }
+    .top-sites li a {
+      padding: 1em;
+      line-height: 2em;
+      text-decoration: none;
+      height: 2em;
+      display: block;
+      background: #fff;
+      color: #7c7c7c;
+      -webkit-transition: all 0.2s linear 0s;
+      transition: all 0.2s linear 0s; }
+      .top-sites li a .favicon, .top-sites li a span {
+        vertical-align: middle; }
+      .top-sites li a span {
+        display: inline-block;
+        width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .top-sites li a:hover {
+        background: #c29ad2;
+        color: #fff; }
+        .top-sites li a:hover .favicon {
+          -webkit-filter: grayscale(100%);
+                  filter: grayscale(100%); }
